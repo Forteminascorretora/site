@@ -1,6 +1,9 @@
-/* ===========================
+/* ===================================================
    FORTE MINAS CORRETORA
-=========================== */
+   style.css
+=================================================== */
+
+/* RESET */
 
 *{
     margin:0;
@@ -14,148 +17,61 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-    background:#f7f9fc;
-    color:#222;
-    line-height:1.6;
+    background:#f7f8fb;
+    color:#333;
+    line-height:1.7;
 }
 
-/* ===========================
-HEADER
-=========================== */
+/* CORES */
 
-.hero{
+:root{
 
-background:linear-gradient(rgba(5,20,40,.75),rgba(5,20,40,.75)),
-url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80");
+    --azul:#0B2E63;
+    --azul-claro:#174A9C;
+    --dourado:#F3B230;
+    --cinza:#6b7280;
+    --branco:#ffffff;
+    --fundo:#f7f8fb;
 
-background-size:cover;
-background-position:center;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
+}
+
+/* LINKS */
+
+a{
+    text-decoration:none;
+    transition:.3s;
+}
+
+img{
+    max-width:100%;
+    display:block;
+}
+
+/* HEADER */
+
+header{
+
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+
+    background:rgba(11,46,99,.95);
+
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+
+    box-shadow:0 4px 20px rgba(0,0,0,.15);
 
 }
 
 .navbar{
 
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:25px 8%;
-
-}
-
-.logo{
-
-display:flex;
-align-items:center;
-gap:15px;
-
-}
-
-.logo img{
-
-width:75px;
-
-}
-
-.logo h2{
-
-color:white;
-font-size:30px;
-
-}
-
-.logo span{
-
-color:#d4d4d4;
-
-}
-
-.navbar ul{
-
-display:flex;
-list-style:none;
-gap:35px;
-
-}
-
-.navbar a{
-
-color:white;
-text-decoration:none;
-font-weight:600;
-
-}
-
-.hero-content{
-
-padding:0 8%;
-margin-bottom:120px;
-
-}
-
-.hero-content h1{
-
-font-size:62px;
-color:white;
-max-width:750px;
-line-height:1.1;
-
-}
-
-.hero-content p{
-
-margin-top:25px;
-font-size:22px;
-color:#eee;
-max-width:650px;
-
-}
-
-.btn{
-
-display:inline-block;
-margin-top:40px;
-
-background:#f59b23;
-
-padding:18px 40px;
-
-border-radius:40px;
-
-text-decoration:none;
-
-font-weight:700;
-
-color:white;
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-background:#d57d08;
-
-transform:translateY(-3px);
-
-}
-
-}
-
-.container{
-
     width:90%;
     max-width:1200px;
 
     margin:auto;
-
-}
-
-header .container{
 
     display:flex;
 
@@ -167,271 +83,275 @@ header .container{
 
 }
 
-.logo img{
-
-    height:55px;
-
-}
-
-nav{
-
-    display:flex;
-
-    gap:25px;
-
-    align-items:center;
-
-}
-
-nav a{
-
-    color:white;
-
-    text-decoration:none;
-
-    font-weight:500;
-
-    transition:.3s;
-
-}
-
-nav a:hover{
-
-    color:#79d65d;
-
-}
-
-/* ===========================
-BOTÕES
-=========================== */
-
-.btn,
-.btn-whatsapp{
-
-    background:#28a745;
-
-    color:#fff;
-
-    padding:14px 30px;
-
-    border-radius:50px;
-
-    text-decoration:none;
-
-    font-weight:600;
-
-    transition:.3s;
-
-    display:inline-block;
-
-}
-
-.btn:hover,
-.btn-whatsapp:hover{
-
-    background:#1f8a37;
-
-    transform:translateY(-3px);
-
-}
-
-/* ===========================
-HERO
-=========================== */
-
-.hero{
-
-background:linear-gradient(rgba(5,20,40,.75),rgba(5,20,40,.75)),
-url("https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1800&q=80");
-
-background-size:cover;
-background-position:center;
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:space-between;
-
-}
-
-.navbar{
-
-display:flex;
-justify-content:space-between;
-align-items:center;
-
-padding:25px 8%;
-
-}
+/* LOGO */
 
 .logo{
 
-display:flex;
-align-items:center;
-gap:15px;
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
 
 }
 
 .logo img{
 
-width:75px;
+    width:70px;
 
 }
 
 .logo h2{
 
-color:white;
-font-size:30px;
+    color:white;
+
+    font-size:28px;
+
+    line-height:1;
 
 }
 
 .logo span{
 
-color:#d4d4d4;
+    color:#d8d8d8;
+
+    font-size:14px;
 
 }
 
+/* MENU */
+
 .navbar ul{
 
-display:flex;
-list-style:none;
-gap:35px;
+    display:flex;
+
+    list-style:none;
+
+    gap:35px;
+
+}
+
+.navbar ul li{
+
+    list-style:none;
 
 }
 
 .navbar a{
 
-color:white;
-text-decoration:none;
-font-weight:600;
+    color:white;
+
+    font-weight:600;
+
+    position:relative;
+
+}
+
+.navbar a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--dourado);
+
+    transition:.3s;
+
+}
+
+.navbar a:hover::after{
+
+    width:100%;
+
+}
+
+/* HERO */
+
+.hero{
+
+    min-height:100vh;
+
+    display:flex;
+
+    align-items:center;
+
+    background:
+
+    linear-gradient(rgba(11,46,99,.70),rgba(11,46,99,.70)),
+
+    url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+
+    background-position:center;
+
+    padding:0 8%;
 
 }
 
 .hero-content{
 
-padding:0 8%;
-margin-bottom:120px;
+    max-width:760px;
+
+    color:white;
+
+    margin-top:80px;
 
 }
 
 .hero-content h1{
 
-font-size:62px;
-color:white;
-max-width:750px;
-line-height:1.1;
+    font-size:60px;
+
+    line-height:1.1;
+
+    margin-bottom:25px;
 
 }
 
 .hero-content p{
 
-margin-top:25px;
-font-size:22px;
-color:#eee;
-max-width:650px;
-
-}
-
-.btn{
-
-display:inline-block;
-margin-top:40px;
-
-background:#f59b23;
-
-padding:18px 40px;
-
-border-radius:40px;
-
-text-decoration:none;
-
-font-weight:700;
-
-color:white;
-
-transition:.3s;
-
-}
-
-.btn:hover{
-
-background:#d57d08;
-
-transform:translateY(-3px);
-
-}
-}
-
-.overlay{
-
-    position:absolute;
-
-    inset:0;
-
-    background:rgba(0,0,0,.55);
-
-}
-
-.hero-content{
-
-    position:relative;
-
-    color:white;
-
-    z-index:2;
-
-    max-width:750px;
-
-    padding:20px;
-
-}
-
-.hero h1{
-
-    font-size:58px;
-
-    margin-bottom:20px;
-
-    font-weight:700;
-
-}
-
-.hero p{
-
     font-size:22px;
+
+    color:#f2f2f2;
 
     margin-bottom:35px;
 
 }
 
-/* ===========================
-SERVIÇOS
-=========================== */
+/* BOTÃO */
 
-.services{
+.botao{
 
-    padding:90px 0;
+    display:inline-block;
+
+    background:var(--dourado);
+
+    color:var(--azul);
+
+    padding:18px 38px;
+
+    border-radius:50px;
+
+    font-weight:700;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.20);
+
+}
+
+.botao:hover{
+
+    transform:translateY(-4px);
+
+    background:#ffd16b;
+
+}
+
+/* SEÇÕES */
+
+section{
+
+    padding:90px 8%;
+
+}
+
+.titulo{
 
     text-align:center;
 
-}
+    color:var(--azul);
 
-.services h2{
+    font-size:40px;
 
-    font-size:38px;
+    margin-bottom:60px;
 
-    color:#0f3d2e;
-
-    margin-bottom:50px;
+    position:relative;
 
 }
+
+.titulo::after{
+
+    content:"";
+
+    width:80px;
+
+    height:4px;
+
+    background:var(--dourado);
+
+    display:block;
+
+    margin:15px auto 0;
+
+    border-radius:5px;
+
+}/* ===================================================
+   SOBRE A EMPRESA
+=================================================== */
+
+.sobre{
+
+    display:grid;
+
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
+
+}
+
+.sobre h3{
+
+    color:var(--azul);
+
+    font-size:32px;
+
+    margin-bottom:20px;
+
+}
+
+.sobre p{
+
+    font-size:18px;
+
+    color:var(--cinza);
+
+    text-align:justify;
+
+}
+
+.sobre img{
+
+    width:100%;
+
+    border-radius:20px;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.15);
+
+    transition:.4s;
+
+}
+
+.sobre img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ===================================================
+   CARDS
+=================================================== */
 
 .cards{
-
-    width:90%;
-
-    max-width:1200px;
-
-    margin:auto;
 
     display:grid;
 
@@ -445,13 +365,15 @@ SERVIÇOS
 
     background:white;
 
-    border-radius:18px;
+    padding:35px;
 
-    overflow:hidden;
+    border-radius:18px;
 
     box-shadow:0 10px 30px rgba(0,0,0,.08);
 
     transition:.35s;
+
+    border-top:5px solid var(--dourado);
 
 }
 
@@ -459,152 +381,445 @@ SERVIÇOS
 
     transform:translateY(-10px);
 
-}
-
-.card img{
-
-    width:100%;
-
-    height:220px;
-
-    object-fit:cover;
+    box-shadow:0 20px 45px rgba(0,0,0,.15);
 
 }
 
 .card h3{
 
-    margin:20px 0 10px;
+    color:var(--azul);
 
-    color:#0f3d2e;
+    margin-bottom:15px;
+
+    font-size:24px;
 
 }
 
 .card p{
 
-    padding:0 20px 30px;
+    color:var(--cinza);
 
 }
 
-/* ===========================
-SOBRE
-=========================== */
+/* ===================================================
+   SEÇÃO SEGUROS
+=================================================== */
 
-.about{
+#seguros{
+
+    background:#f4f7fb;
+
+}
+
+#seguros .card{
+
+    text-align:center;
+
+}
+
+#seguros .card h3{
+
+    margin-top:10px;
+
+}
+
+#seguros .card:hover{
+
+    border-top:5px solid var(--azul);
+
+}
+
+/* ===================================================
+   CONSÓRCIOS
+=================================================== */
+
+#consorcios{
 
     background:white;
 
-    padding:90px 0;
+}
+
+#consorcios .card{
 
     text-align:center;
 
 }
 
-.about h2{
+/* ===================================================
+   DESTAQUES
+=================================================== */
 
-    font-size:40px;
+.destaques{
 
-    color:#0f3d2e;
+    display:grid;
 
-    margin-bottom:25px;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+    margin-top:50px;
 
 }
 
-.about p{
+.destaque{
 
-    width:80%;
+    background:var(--azul);
 
-    margin:auto;
+    color:white;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    text-align:center;
+
+    transition:.3s;
+
+}
+
+.destaque:hover{
+
+    background:var(--azul-claro);
+
+    transform:translateY(-8px);
+
+}
+
+.destaque h3{
+
+    font-size:36px;
+
+    color:var(--dourado);
+
+    margin-bottom:10px;
+
+}
+
+.destaque p{
+
+    color:white;
+
+}
+
+/* ===================================================
+   ANIMAÇÕES
+=================================================== */
+
+.card,
+.botao,
+.sobre img,
+.destaque{
+
+    transition:all .35s ease;
+
+}/* ===================================================
+   CONTATO
+=================================================== */
+
+#contato{
+
+    background:#f4f7fb;
+
+}
+
+#contato p{
+
+    color:var(--cinza);
 
     font-size:18px;
 
-    color:#555;
+}
+
+#contato iframe{
+
+    width:100%;
+
+    height:420px;
+
+    border:0;
+
+    border-radius:20px;
+
+    margin-top:40px;
+
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
 
 }
 
-/* ===========================
-CTA
-=========================== */
+/* ===================================================
+   BOTÃO WHATSAPP
+=================================================== */
 
-.cta{
+.whatsapp{
 
-    background:#0f3d2e;
+    position:fixed;
+
+    right:25px;
+
+    bottom:25px;
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    background:#25D366;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
 
     color:white;
 
-    text-align:center;
+    font-size:32px;
 
-    padding:80px 20px;
+    text-decoration:none;
 
-}
+    box-shadow:0 10px 25px rgba(0,0,0,.30);
 
-.cta h2{
+    z-index:999;
 
-    font-size:42px;
-
-    margin-bottom:30px;
+    transition:.3s;
 
 }
 
-/* ===========================
-FOOTER
-=========================== */
+.whatsapp:hover{
+
+    transform:scale(1.1);
+
+    background:#1ebe5d;
+
+}
+
+/* ===================================================
+   RODAPÉ
+=================================================== */
 
 footer{
 
-    background:#081d15;
+    background:var(--azul);
 
     color:white;
 
     text-align:center;
 
-    padding:50px 20px;
+    padding:60px 20px;
 
 }
 
-footer h3{
+footer h2{
 
     font-size:28px;
 
-    margin-bottom:20px;
+    margin-bottom:15px;
 
 }
 
 footer p{
 
-    margin:10px;
+    color:#d9d9d9;
 
-    color:#ddd;
+    margin:8px 0;
 
-}
-
-/* ===========================
-RESPONSIVO
-=========================== */
-
-@media(max-width:900px){
-
-.hero h1{
-
-font-size:42px;
+    font-size:15px;
 
 }
 
-.hero p{
+/* ===================================================
+   SCROLLBAR
+=================================================== */
 
-font-size:18px;
+::-webkit-scrollbar{
 
-}
-
-nav{
-
-display:none;
+    width:10px;
 
 }
 
-.about p{
+::-webkit-scrollbar-track{
 
-width:95%;
+    background:#ececec;
 
 }
+
+::-webkit-scrollbar-thumb{
+
+    background:var(--azul);
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:var(--azul-claro);
+
+}
+
+/* ===================================================
+   RESPONSIVO
+=================================================== */
+
+@media(max-width:992px){
+
+    .navbar{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding:20px 0;
+
+    }
+
+    .navbar ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+    .hero{
+
+        text-align:center;
+
+        padding:140px 8% 80px;
+
+    }
+
+    .hero-content{
+
+        margin:0 auto;
+
+    }
+
+    .hero-content h1{
+
+        font-size:42px;
+
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+
+    }
+
+    .sobre{
+
+        grid-template-columns:1fr;
+
+        gap:40px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .titulo{
+
+        font-size:30px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:34px;
+
+    }
+
+    .hero-content p{
+
+        font-size:17px;
+
+    }
+
+    .card{
+
+        padding:25px;
+
+    }
+
+    .logo img{
+
+        width:55px;
+
+    }
+
+    .logo h2{
+
+        font-size:22px;
+
+    }
+
+    .logo span{
+
+        font-size:12px;
+
+    }
+
+    .botao{
+
+        width:100%;
+
+        text-align:center;
+
+    }
+
+}
+
+@media(max-width:480px){
+
+    section{
+
+        padding:70px 20px;
+
+    }
+
+    .hero{
+
+        min-height:90vh;
+
+    }
+
+    .hero-content h1{
+
+        font-size:28px;
+
+    }
+
+    .hero-content p{
+
+        font-size:16px;
+
+    }
+
+    .navbar ul{
+
+        gap:12px;
+
+    }
+
+    .navbar a{
+
+        font-size:14px;
+
+    }
+
+    .whatsapp{
+
+        width:60px;
+
+        height:60px;
+
+        font-size:28px;
+
+    }
 
 }
