@@ -1,120 +1,322 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Forte Minas Corretora de Seguros</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Proteção para você, sua família e sua empresa. Seguros, Consórcios e Financiamentos com atendimento especializado.">
+<title>Forte Minas Corretora de Seguros</title>
 
-    <link rel="stylesheet" href="css/style.css">
+<meta name="description" content="Seguros, Consórcios e Proteção Patrimonial. Atendimento personalizado para pessoas e empresas.">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-    <script src="https://kit.fontawesome.com/7d0b0e4e1d.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f8f9fc;
+color:#222;
+}
+
+header{
+background:#0a2d66;
+color:#fff;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:1000;
+}
+
+header h2{
+font-size:28px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:25px;
+font-weight:500;
+}
+
+.hero{
+height:90vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+url("https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=80");
+background-size:cover;
+background-position:center;
+color:white;
+padding:30px;
+}
+
+.hero h1{
+font-size:55px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 35px;
+background:#f6b400;
+color:#000;
+font-weight:bold;
+border-radius:40px;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+section{
+padding:80px 8%;
+}
+
+.titulo{
+text-align:center;
+margin-bottom:50px;
+font-size:36px;
+color:#0a2d66;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:30px;
+border-radius:15px;
+box-shadow:0 5px 18px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-8px);
+}
+
+.card h3{
+margin-bottom:15px;
+color:#0a2d66;
+}
+
+.sobre{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.sobre img{
+width:100%;
+border-radius:15px;
+}
+
+footer{
+background:#0a2d66;
+color:white;
+text-align:center;
+padding:35px;
+}
+
+iframe{
+width:100%;
+height:400px;
+border:none;
+border-radius:15px;
+}
+
+.whatsapp{
+position:fixed;
+right:20px;
+bottom:20px;
+background:#25d366;
+width:70px;
+height:70px;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+text-decoration:none;
+color:white;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+}
+
+@media(max-width:900px){
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+header{
+flex-direction:column;
+}
+
+nav{
+margin-top:15px;
+}
+
+.sobre{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
 </head>
-
 <body>
 
 <header>
 
-<div class="container">
-
-<div class="logo">
-<img src="img/logo.png" alt="Forte Minas">
-</div>
+<h2>Forte Minas</h2>
 
 <nav>
 
-<a href="#">Início</a>
-<a href="#seguros">Seguros</a>
-<a href="#sobre">Sobre</a>
-<a href="#contato">Contato</a>
+<a href="#inicio">Início</a>
 
-<a class="btn-whatsapp" href="#">
-<i class="fab fa-whatsapp"></i>
-WhatsApp
-</a>
+<a href="#sobre">Sobre</a>
+
+<a href="#seguros">Seguros</a>
+
+<a href="#consorcios">Consórcios</a>
+
+<a href="#contato">Contato</a>
 
 </nav>
 
-</div>
-
 </header>
 
-<section class="hero">
+<section class="hero" id="inicio">
 
-<div class="overlay"></div>
+<div>
 
-<div class="hero-content">
+<h1>Proteção para o que realmente importa.</h1>
 
-<h1>Proteja o que realmente importa.</h1>
+<p>Seguros, Consórcios e Soluções Financeiras para você, sua família e sua empresa.</p>
 
-<p>
-Soluções completas em seguros,
-consórcios e financiamentos.
-</p>
+<a class="btn" href="https://wa.me/5533999999999" target="_blank">
 
-<a href="#contato" class="btn">
 Solicitar Cotação
+
 </a>
 
 </div>
 
 </section>
 
-<section id="seguros" class="services">
+<section id="sobre">
 
-<h2>Nossos Serviços</h2>
+<h2 class="titulo">Sobre a Forte Minas</h2>
+
+<div class="sobre">
+
+<div>
+
+<p>
+
+A Forte Minas Corretora atua oferecendo soluções completas em seguros e consórcios, com atendimento personalizado, transparência e compromisso com cada cliente.
+
+<br><br>
+
+Nosso objetivo é garantir tranquilidade e proteção para pessoas, famílias e empresas.
+
+</p>
+
+</div>
+
+<img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=900&q=80">
+
+</div>
+
+</section>
+
+<section id="seguros">
+
+<h2 class="titulo">Nossos Seguros</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Seguro Auto</h3>
+<p>Proteção completa para seu veículo.</p>
+</div>
+
+<div class="card">
+<h3>Seguro Residencial</h3>
+<p>Segurança para sua casa e patrimônio.</p>
+</div>
+
+<div class="card">
+<h3>Seguro Empresarial</h3>
+<p>Proteja sua empresa contra imprevistos.</p>
+</div>
+
+<div class="card">
+<h3>Seguro de Vida</h3>
+<p>Mais tranquilidade para sua família.</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="consorcios">
+
+<h2 class="titulo">Consórcios</h2>
 
 <div class="cards">
 
 <div class="card">
 
-<img src="img/auto.jpg">
+<h3>Veículos</h3>
 
-<h3>Seguro Auto</h3>
-
-<p>
-Proteção completa para seu veículo.
-</p>
+<p>Planejamento inteligente para comprar seu carro.</p>
 
 </div>
 
 <div class="card">
 
-<img src="img/vida.jpg">
+<h3>Imóveis</h3>
 
-<h3>Seguro de Vida</h3>
-
-<p>
-Segurança para quem você ama.
-</p>
+<p>Realize o sonho da casa própria.</p>
 
 </div>
 
 <div class="card">
 
-<img src="img/residencial.jpg">
+<h3>Empresarial</h3>
 
-<h3>Seguro Residencial</h3>
-
-<p>
-Proteção para seu patrimônio.
-</p>
-
-</div>
-
-<div class="card">
-
-<img src="img/empresarial.jpg">
-
-<h3>Seguro Empresarial</h3>
-
-<p>
-Sua empresa protegida.
-</p>
+<p>Invista no crescimento do seu negócio.</p>
 
 </div>
 
@@ -122,59 +324,37 @@ Sua empresa protegida.
 
 </section>
 
-<section id="sobre" class="about">
+<section id="contato">
 
-<div class="container">
+<h2 class="titulo">Contato</h2>
 
-<h2>Quem Somos</h2>
+<p style="text-align:center;margin-bottom:30px;">
 
-<p>
-
-A Forte Minas Corretora trabalha oferecendo
-as melhores soluções em seguros,
-consórcios e financiamentos,
-sempre buscando atendimento personalizado,
-agilidade e confiança.
+Entre em contato e solicite uma cotação personalizada.
 
 </p>
 
-</div>
+<iframe
+src="https://www.google.com/maps?q=Manhuaçu+MG&output=embed">
+</iframe>
 
 </section>
 
-<section class="cta">
+<footer>
 
-<h2>Faça sua cotação agora mesmo.</h2>
+<h3>Forte Minas Corretora de Seguros</h3>
 
-<a href="#" class="btn">
-Falar com um Especialista
-</a>
-
-</section>
-
-<footer id="contato">
-
-<h3>Forte Minas Corretora</h3>
-
-<p>
-Telefone
-</p>
-
-<p>
-WhatsApp
-</p>
-
-<p>
-Email
-</p>
-
-<p>
-Endereço
-</p>
+<p>© 2026 - Todos os direitos reservados.</p>
 
 </footer>
 
-<script src="js/script.js"></script>
+<a class="whatsapp"
+href="https://wa.me/5533999999999"
+target="_blank">
+
+💬
+
+</a>
 
 </body>
 </html>
