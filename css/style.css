@@ -748,8 +748,9 @@ footer p{
 
     .logo img{
 
-        width:55px;
-
+       height:70px;
+       width:auto;
+    
     }
 
     .logo h2{
