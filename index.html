@@ -3,744 +3,1979 @@
 
 <head>
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- =====================================================
+    FORTE MINAS CORRETORA DE SEGUROS
+    Site Institucional Premium
+    ====================================================== -->
 
-<title>Forte Minas Corretora de Seguros</title>
+    <meta charset="UTF-8">
 
-<meta name="description" content="Forte Minas Corretora de Seguros - Proteção para você, sua família e sua empresa.">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
+    <!-- SEO PRINCIPAL -->
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
+    <title>
+        Forte Minas Corretora de Seguros | Seguro Auto, Caminhão,
+        Empresas e Famílias
+    </title>
 
-body{
-background:#f7f8fb;
-color:#222;
-line-height:1.6;
-}
 
-header{
+    <meta name="description"
+    content="
+    A Forte Minas Corretora de Seguros oferece soluções completas
+    em seguros para veículos, caminhões, empresas, produtores rurais
+    e famílias. Proteção segura e atendimento personalizado.
+    ">
 
-position:fixed;
-top:0;
-left:0;
-width:100%;
-padding:18px 8%;
-display:flex;
-justify-content:space-between;
-align-items:center;
 
-background:#0B2E63;
+    <meta name="keywords"
+    content="
+    corretora de seguros,
+    seguro caminhão,
+    seguro frota,
+    seguro auto,
+    seguro empresarial,
+    seguro rural,
+    Minas Gerais,
+    Forte Minas
+    ">
 
-z-index:999;
 
-box-shadow:0 3px 12px rgba(0,0,0,.15);
+    <meta name="author"
+    content="Forte Minas Corretora de Seguros">
 
-}
 
-.logo{
+    <meta name="robots"
+    content="index, follow">
 
-display:flex;
-align-items:center;
-gap:15px;
 
-}
+    <!-- CANONICAL -->
 
-.logo img{
+    <link rel="canonical"
+    href="https://forteminascorretora.com/">
 
-height:65px;
 
-}
 
-.logo h2{
+    <!-- OPEN GRAPH -->
 
-color:#fff;
-font-size:28px;
+    <meta property="og:type"
+    content="website">
 
-}
 
-.logo span{
+    <meta property="og:title"
+    content="Forte Minas Corretora de Seguros">
 
-color:#f3b230;
-font-size:14px;
 
-}
+    <meta property="og:description"
+    content="
+    Protegemos o que realmente importa.
+    Seguros para pessoas, empresas e transportadores.
+    ">
 
-nav{
 
-display:flex;
-gap:35px;
+    <meta property="og:url"
+    content="https://forteminascorretora.com/">
 
-}
 
-nav a{
+    <meta property="og:image"
+    content="https://forteminascorretora.com/assets/hero.webp">
 
-text-decoration:none;
-color:white;
-font-weight:600;
-transition:.3s;
 
-}
+    <meta property="og:locale"
+    content="pt_BR">
 
-nav a:hover{
 
-color:#f3b230;
 
-}
+    <!-- TWITTER CARD -->
 
-.hero{
+    <meta name="twitter:card"
+    content="summary_large_image">
 
-height:100vh;
 
-display:flex;
-justify-content:center;
-align-items:center;
+    <meta name="twitter:title"
+    content="Forte Minas Corretora de Seguros">
 
-text-align:center;
 
-padding:40px;
+    <meta name="twitter:description"
+    content="Seguro, bem seguro.">
 
-background:
 
-linear-gradient(rgba(11,46,99,.75),rgba(11,46,99,.75)),
+    <meta name="twitter:image"
+    content="https://forteminascorretora.com/assets/hero.webp">
 
-url("https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1800&q=80");
 
-background-size:cover;
-background-position:center;
 
-color:white;
 
-}
+    <!-- FAVICON -->
 
-.hero h1{
+    <link rel="icon"
+    href="assets/favicon.png"
+    type="image/png">
 
-font-size:60px;
-margin-bottom:20px;
 
-}
 
-.hero p{
+    <!-- GOOGLE FONTS -->
 
-font-size:22px;
-max-width:750px;
-margin:auto;
+    <link rel="preconnect"
+    href="https://fonts.googleapis.com">
 
-}
 
-.botao{
+    <link rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin>
 
-display:inline-block;
 
-margin-top:40px;
+    <link href="
+    https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap
+    "
+    rel="stylesheet">
 
-padding:18px 40px;
 
-background:#F3B230;
 
-color:#0B2E63;
+    <!-- CSS -->
 
-text-decoration:none;
+    <link rel="stylesheet"
+    href="style.css">
 
-font-weight:bold;
-
-border-radius:40px;
-
-transition:.3s;
-
-}
-
-.botao:hover{
-
-transform:translateY(-4px);
-
-background:#ffca54;
-
-}
-
-section{
-
-padding:90px 8%;
-
-}
-
-.titulo{
-
-font-size:40px;
-
-text-align:center;
-
-margin-bottom:60px;
-
-color:#0B2E63;
-
-}
-
-.cards{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-
-gap:30px;
-
-}
-
-.card{
-
-background:white;
-
-padding:35px;
-
-border-radius:15px;
-
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-
-transition:.3s;
-
-}
-
-.card:hover{
-
-transform:translateY(-8px);
-
-}
-
-.card h3{
-
-color:#0B2E63;
-
-margin-bottom:15px;
-
-}
-
-.sobre{
-
-display:grid;
-
-grid-template-columns:1fr 1fr;
-
-gap:60px;
-
-align-items:center;
-
-}
-
-.sobre img{
-
-width:100%;
-border-radius:20px;
-
-box-shadow:0 8px 25px rgba(0,0,0,.15);
-
-}
-
-footer{
-
-background:#0B2E63;
-
-color:white;
-
-padding:40px;
-
-text-align:center;
-
-}
-
-.whatsapp{
-
-position:fixed;
-
-bottom:25px;
-
-right:25px;
-
-width:70px;
-
-height:70px;
-
-border-radius:50%;
-
-background:#25D366;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-font-size:32px;
-
-color:white;
-
-text-decoration:none;
-
-box-shadow:0 8px 20px rgba(0,0,0,.30);
-
-}
-
-@media(max-width:900px){
-
-header{
-
-flex-direction:column;
-
-padding:20px;
-
-}
-
-nav{
-
-margin-top:20px;
-
-flex-wrap:wrap;
-
-justify-content:center;
-
-}
-
-.hero h1{
-
-font-size:40px;
-
-}
-
-.hero p{
-
-font-size:18px;
-
-}
-
-.sobre{
-
-grid-template-columns:1fr;
-
-}
-
-}
-
-</style>
 
 </head>
 
+
+
 <body>
 
-<header>
 
-<div class="logo">
+<!-- =====================================================
+HEADER
+====================================================== -->
 
-<img src="img/logo.png" alt="Forte Minas">
 
-<div>
+<header class="header" id="header">
 
-<h2>FORTE MINAS</h2>
 
-<span>Corretora de Seguros</span>
+    <div class="container header-container">
 
-</div>
 
-</div>
+        <a href="#inicio"
+        class="logo">
 
-<nav>
+            <img 
+            src="assets/logo.png"
+            alt="Forte Minas Corretora de Seguros">
 
-<a href="#inicio">Início</a>
-<a href="#sobre">Empresa</a>
-<a href="#seguros">Seguros</a>
-<a href="#consorcios">Consórcios</a>
-<a href="#contato">Contato</a>
+        </a>
 
-</nav>
+
+
+        <nav class="nav"
+        id="nav">
+
+
+            <ul class="nav-list">
+
+
+                <li>
+                    <a href="#inicio">
+                        Início
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#sobre">
+                        Sobre
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#seguros">
+                        Seguros
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#diferenciais">
+                        Diferenciais
+                    </a>
+                </li>
+
+
+                <li>
+                    <a href="#contato">
+                        Contato
+                    </a>
+                </li>
+
+
+            </ul>
+
+
+        </nav>
+
+
+
+
+        <a href="https://wa.me/553333333333"
+        class="btn-header"
+        target="_blank">
+
+            Cotar Agora
+
+        </a>
+
+
+
+
+        <!-- MENU MOBILE -->
+
+
+        <button class="menu-toggle"
+        aria-label="Abrir menu"
+        id="menu-toggle">
+
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+
+        </button>
+
+
+
+    </div>
+
 
 </header>
 
-<section class="hero" id="inicio">
 
-<div>
 
-<h1>Proteção para tudo o que realmente importa.</h1>
+
+
+<!-- =====================================================
+HERO
+====================================================== -->
+
+
+<section class="hero"
+id="inicio">
+
+
+<div class="hero-overlay"></div>
+
+
+<div class="container hero-container">
+
+
+<div class="hero-content">
+
+
+
+<span class="hero-tag">
+
+    Seguro, bem seguro.
+
+</span>
+
+
+
+
+<h1>
+
+    Protegemos o que
+    <strong>
+        realmente importa.
+    </strong>
+
+</h1>
+
+
+
 
 <p>
 
-Soluções completas em seguros e consórcios para pessoas, famílias, produtores rurais e empresas.
+    Soluções completas em seguros para
+    transportadores, empresas, famílias
+    e patrimônios.
 
 </p>
 
-<a href="https://wa.me/5533999999999" class="botao">
 
-Solicitar Cotação
+
+
+<div class="hero-buttons">
+
+
+<a href="https://wa.me/553333333333"
+class="btn-primary"
+target="_blank">
+
+    Solicitar Cotação
 
 </a>
 
-</div>
 
-</section>
 
-    <section id="sobre">
+<a href="#seguros"
+class="btn-secondary">
 
-<h2 class="titulo">Quem Somos</h2>
+    Conheça nossos seguros
 
-<div class="sobre">
-
-<div>
-
-<h3 style="color:#0B2E63;font-size:30px;margin-bottom:20px;">
-Forte Minas Corretora
-</h3>
-
-<p>
-
-A Forte Minas Corretora de Seguros nasceu com o propósito de oferecer tranquilidade,
-segurança e atendimento personalizado para cada cliente.
-
-</p>
-
-<br>
-
-<p>
-
-Trabalhamos com diversas seguradoras e administradoras de consórcio,
-buscando sempre a melhor solução para proteger seu patrimônio,
-sua família e seus negócios.
-
-</p>
-
-<br>
-
-<p>
-
-Nosso compromisso é oferecer atendimento transparente,
-agilidade nas cotações e suporte sempre que você precisar.
-
-</p>
-
-</div>
-
-<div>
-
-<img src="LOGO FT.PNG" alt="Forte Minas Corretora">
-
-</div>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="titulo">Por que escolher a Forte Minas?</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>Atendimento Personalizado</h3>
-
-<p>
-
-Entendemos a necessidade de cada cliente para oferecer a melhor proteção.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Melhores Seguradoras</h3>
-
-<p>
-
-Trabalhamos com grandes seguradoras do mercado para oferecer as melhores opções.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Cotação Rápida</h3>
-
-<p>
-
-Receba sua proposta de forma rápida, prática e sem burocracia.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>Suporte Completo</h3>
-
-<p>
-
-Acompanhamos você antes, durante e após a contratação do seguro.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="seguros">
-
-<h2 class="titulo">Nossos Seguros</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>🚗 Seguro Auto</h3>
-
-<p>
-Proteção completa para seu veículo contra acidentes, roubo e terceiros.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏡 Seguro Residencial</h3>
-
-<p>
-Segurança para sua casa e tranquilidade para sua família.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏢 Seguro Empresarial</h3>
-
-<p>
-Proteja sua empresa, patrimônio e colaboradores.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>❤️ Seguro de Vida</h3>
-
-<p>
-Garantia de proteção financeira para quem você ama.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚜 Seguro Rural</h3>
-
-<p>
-Cobertura para propriedades, máquinas e atividades do campo.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚛 Seguro Caminhão</h3>
-
-<p>
-Proteção para caminhões e transportadores em todo o Brasil.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏍 Seguro Moto</h3>
-
-<p>
-Mais segurança para quem utiliza motocicleta no dia a dia.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏥 Seguro Saúde</h3>
-
-<p>
-Planos e soluções para cuidar da saúde da sua família e colaboradores.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-<section id="consorcios">
-
-<h2 class="titulo">Consórcios</h2>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>🚗 Veículos</h3>
-
-<p>
-
-Planeje a compra do seu carro sem pagar juros.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏠 Imóveis</h3>
-
-<p>
-
-Realize o sonho da casa própria de forma planejada.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚜 Máquinas Agrícolas</h3>
-
-<p>
-
-Ideal para produtores que desejam investir no crescimento da propriedade.
-
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🚛 Caminhões</h3>
-
-<p>
-
-Renove sua frota com planejamento financeiro inteligente.
-
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-    <section id="contato">
-
-<h2 class="titulo">Entre em Contato</h2>
-
-<p style="text-align:center;max-width:700px;margin:0 auto 40px;">
-
-Nossa equipe está pronta para ajudar você a encontrar a melhor solução em seguros e consórcios.
-
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>📞 Telefone</h3>
-
-<p>(33) XXXX-XXXX</p>
-
-</div>
-
-<div class="card">
-
-<h3>📱 WhatsApp</h3>
-
-<p>(33) 98401-7050</p>
-
-<p style="margin-top:15px;">
-<a class="botao" href="https://wa.me/5533984017050" target="_blank">
-Falar pelo WhatsApp
 </a>
+
+
+
+</div>
+
+
+
+
+
+<div class="hero-rating">
+
+
+<div class="stars">
+
+★★★★★
+
+</div>
+
+
+<p>
+
+Atendimento personalizado e confiança
+para proteger suas conquistas.
+
 </p>
 
-</div>
-
-<div class="card">
-
-<h3>✉️ E-mail</h3>
-
-<p>contato@forteminascorretora.com</p>
 
 </div>
 
-<div class="card">
 
-<h3>📍 Localização</h3>
-
-<p>Manhuaçu - Minas Gerais</p>
 
 </div>
 
+
+
+
+
+<div class="hero-image">
+
+
+<img src="assets/logo.png"
+alt="Forte Minas Corretora de Seguros">
+
+
 </div>
 
-<div style="margin-top:60px;">
 
-<iframe
-src="https://www.google.com/maps?q=Manhuaçu+MG&output=embed"
-style="width:100%;height:420px;border:0;border-radius:20px;"
-loading="lazy">
-</iframe>
+
 
 </div>
+
 
 </section>
 
-<footer>
+    <!-- =====================================================
+SOBRE A FORTE MINAS
+====================================================== -->
 
-<h2 style="margin-bottom:15px;">
-FORTE MINAS CORRETORA DE SEGUROS
+
+<section class="about section"
+id="sobre">
+
+
+<div class="container">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+Quem Somos
+
+</span>
+
+
+<h2>
+
+Uma corretora construída
+para proteger pessoas e negócios.
+
 </h2>
 
+
 <p>
 
-Protegendo pessoas, famílias, empresas e patrimônios com confiança,
-segurança e atendimento personalizado.
+A Forte Minas Corretora de Seguros nasceu com o propósito
+de oferecer proteção inteligente, atendimento próximo e
+soluções personalizadas para cada cliente.
 
 </p>
 
-<br>
+
+</div>
+
+
+
+
+<div class="about-grid">
+
+
+
+<div class="about-image reveal">
+
+
+<img 
+src="assets/hero.webp"
+alt="Equipe Forte Minas Corretora de Seguros">
+
+
+</div>
+
+
+
+
+
+<div class="about-content reveal">
+
+
+<h3>
+
+Mais que seguros,
+somos parceiros de confiança.
+
+</h3>
+
+
 
 <p>
 
-© 2026 Forte Minas Corretora de Seguros<br>
+Sabemos que cada cliente possui uma história,
+um patrimônio e objetivos diferentes.
+
+Por isso, trabalhamos buscando as melhores
+soluções em seguros, analisando necessidades
+e encontrando a proteção adequada.
+
+</p>
+
+
+
+<p>
+
+Nossa missão é unir conhecimento técnico,
+atendimento humano e grandes seguradoras
+para entregar segurança e tranquilidade.
+
+</p>
+
+
+
+
+<ul class="about-list">
+
+
+<li>
+
+<span>✓</span>
+
+Atendimento personalizado
+
+</li>
+
+
+<li>
+
+<span>✓</span>
+
+Especialistas em transporte e empresas
+
+</li>
+
+
+<li>
+
+<span>✓</span>
+
+Proteção para famílias e patrimônios
+
+</li>
+
+
+<li>
+
+<span>✓</span>
+
+Consultoria antes, durante e depois da contratação
+
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- =====================================================
+SEGUROS
+====================================================== -->
+
+
+<section class="services section"
+id="seguros">
+
+
+<div class="container">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+Nossos Seguros
+
+</span>
+
+
+
+<h2>
+
+Proteção completa para todos
+os momentos da sua vida.
+
+</h2>
+
+
+<p>
+
+Encontre soluções personalizadas para seu veículo,
+sua empresa, sua família e seu patrimônio.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="cards-grid">
+
+
+
+
+
+<article class="service-card reveal">
+
+
+<div class="service-icon">
+
+🚛
+
+</div>
+
+
+<h3>
+
+Seguro Caminhão
+
+</h3>
+
+
+<p>
+
+Proteção especializada para caminhoneiros,
+transportadores e frotas.
+
+</p>
+
+
+<a href="#contato">
+
+Saiba mais →
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="service-card reveal">
+
+
+<div class="service-icon">
+
+🚗
+
+</div>
+
+
+<h3>
+
+Seguro Auto
+
+</h3>
+
+
+<p>
+
+Seu veículo protegido contra imprevistos,
+com assistência e segurança.
+
+</p>
+
+
+<a href="#contato">
+
+Saiba mais →
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="service-card reveal">
+
+
+<div class="service-icon">
+
+🏢
+
+</div>
+
+
+<h3>
+
+Seguro Empresarial
+
+</h3>
+
+
+<p>
+
+Proteção para empresas, equipamentos,
+instalações e operações.
+
+</p>
+
+
+<a href="#contato">
+
+Saiba mais →
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="service-card reveal">
+
+
+<div class="service-icon">
+
+🏡
+
+</div>
+
+
+<h3>
+
+Seguro Residencial
+
+</h3>
+
+
+<p>
+
+Cuide do seu lar com coberturas
+pensadas para sua realidade.
+
+</p>
+
+
+<a href="#contato">
+
+Saiba mais →
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="service-card reveal">
+
+
+<div class="service-icon">
+
+❤️
+
+</div>
+
+
+<h3>
+
+Seguro de Vida
+
+</h3>
+
+
+<p>
+
+Proteção financeira para você
+e sua família.
+
+</p>
+
+
+<a href="#contato">
+
+Saiba mais →
+
+</a>
+
+
+</article>
+
+
+
+
+
+
+
+<article class="service-card reveal">
+
+
+<div class="service-icon">
+
+🌾
+
+</div>
+
+
+<h3>
+
+Seguro Rural
+
+</h3>
+
+
+<p>
+
+Segurança para produtores e
+patrimônios do campo.
+
+</p>
+
+
+<a href="#contato">
+
+Saiba mais →
+
+</a>
+
+
+</article>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+BANNER INSTITUCIONAL
+====================================================== -->
+
+
+<section class="institutional-banner">
+
+
+<div class="container">
+
+
+<div class="banner-content">
+
+
+<h2>
+
+Proteção para quem movimenta Minas e o Brasil.
+
+</h2>
+
+
+<p>
+
+Especialistas em soluções para transportadores,
+empresas e famílias.
+
+</p>
+
+
+
+<a href="#contato"
+class="btn-primary">
+
+Fale com um especialista
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+DIFERENCIAIS
+====================================================== -->
+
+
+<section class="advantages section"
+id="diferenciais">
+
+
+<div class="container">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+Por que escolher
+
+</span>
+
+
+
+<h2>
+
+A diferença está no cuidado
+com cada cliente.
+
+</h2>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="advantages-grid">
+
+
+
+
+
+
+<div class="advantage-card reveal">
+
+
+<div class="advantage-number">
+
+01
+
+</div>
+
+
+<h3>
+
+Experiência
+
+</h3>
+
+
+<p>
+
+Conhecimento do mercado de seguros
+e das necessidades dos clientes.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="advantage-card reveal">
+
+
+<div class="advantage-number">
+
+02
+
+</div>
+
+
+<h3>
+
+Atendimento Humano
+
+</h3>
+
+
+<p>
+
+Você fala com pessoas preparadas
+para ajudar quando precisar.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="advantage-card reveal">
+
+
+<div class="advantage-number">
+
+03
+
+</div>
+
+
+<h3>
+
+Soluções Personalizadas
+
+</h3>
+
+
+<p>
+
+Cada cliente recebe uma análise
+adequada ao seu perfil.
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="advantage-card reveal">
+
+
+<div class="advantage-number">
+
+04
+
+</div>
+
+
+<h3>
+
+Segurança
+
+</h3>
+
+
+<p>
+
+Parceria com seguradoras sólidas
+e confiáveis.
+
+</p>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- =====================================================
+NÚMEROS
+====================================================== -->
+
+
+<section class="numbers">
+
+
+<div class="container numbers-grid">
+
+
+
+<div class="number-item">
+
+
+<strong data-number="500">
+
+0
+
+</strong>
+
+
+<span>
+
+Veículos protegidos
+
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="number-item">
+
+
+<strong data-number="280">
+
+0
+
+</strong>
+
+
+<span>
+
+Clientes atendidos
+
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="number-item">
+
+
+<strong data-number="10">
+
+0
+
+</strong>
+
+
+<span>
+
+Anos de experiência
+
+</span>
+
+
+</div>
+
+
+
+
+
+<div class="number-item">
+
+
+<strong data-number="100">
+
+0
+
+</strong>
+
+
+<span>
+
+Compromisso
+
+</span>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+DEPOIMENTOS
+====================================================== -->
+
+
+<section class="testimonials section">
+
+
+<div class="container">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+Clientes
+
+</span>
+
+
+
+<h2>
+
+Quem confia na Forte Minas
+
+</h2>
+
+
+</div>
+
+
+
+
+
+
+<div class="testimonial-grid">
+
+
+
+
+
+<div class="testimonial-card reveal">
+
+
+<div class="quote">
+
+"
+
+</div>
+
+
+<p>
+
+Atendimento excelente.
+Sempre tive suporte quando precisei.
+
+</p>
+
+
+<h4>
+
+Cliente Forte Minas
+
+</h4>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="testimonial-card reveal">
+
+
+<div class="quote">
+
+"
+
+</div>
+
+
+<p>
+
+Uma corretora que realmente
+se preocupa com o cliente.
+
+</p>
+
+
+<h4>
+
+Cliente Forte Minas
+
+</h4>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="testimonial-card reveal">
+
+
+<div class="quote">
+
+"
+
+</div>
+
+
+<p>
+
+Segurança e confiança para
+continuar trabalhando tranquilo.
+
+</p>
+
+
+<h4>
+
+Cliente Forte Minas
+
+</h4>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+    <!-- =====================================================
+CTA COTAÇÃO
+====================================================== -->
+
+
+<section class="cta section">
+
+
+<div class="container">
+
+
+<div class="cta-box">
+
+
+
+<div class="cta-content">
+
+
+<span class="section-tag">
+
+Vamos conversar?
+
+</span>
+
+
+
+<h2>
+
+Proteja hoje aquilo que você
+levou anos para construir.
+
+</h2>
+
+
+
+<p>
+
+Solicite uma cotação personalizada
+e encontre a melhor solução para
+você, sua família ou sua empresa.
+
+</p>
+
+
+
+</div>
+
+
+
+
+<a href="https://wa.me/553333333333"
+class="btn-primary"
+target="_blank">
+
+
+Solicitar Cotação pelo WhatsApp
+
+
+</a>
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+CONTATO
+====================================================== -->
+
+
+<section class="contact section"
+id="contato">
+
+
+<div class="container">
+
+
+<div class="section-header">
+
+
+<span class="section-tag">
+
+Contato
+
+</span>
+
+
+<h2>
+
+Estamos prontos para ajudar.
+
+</h2>
+
+
+<p>
+
+Entre em contato com nossa equipe
+e encontre a proteção ideal.
+
+</p>
+
+
+</div>
+
+
+
+
+
+<div class="contact-grid">
+
+
+
+
+
+
+<div class="contact-card">
+
+
+<div class="contact-icon">
+
+📱
+
+</div>
+
+
+<h3>
+
+WhatsApp
+
+</h3>
+
+
+<p>
+
+Atendimento rápido e personalizado.
+
+</p>
+
+
+<a href="https://wa.me/553333333333"
+target="_blank">
+
+Conversar agora
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="contact-card">
+
+
+<div class="contact-icon">
+
+✉️
+
+</div>
+
+
+<h3>
+
+E-mail
+
+</h3>
+
+
+<p>
+
+Envie sua solicitação.
+
+</p>
+
+
+<a href="mailto:financeiro@forteminascorretora.com">
+
+financeiro@forteminascorretora.com
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="contact-card">
+
+
+<div class="contact-icon">
+
+📍
+
+</div>
+
+
+<h3>
+
+Localização
+
+</h3>
+
+
+<p>
+
+Minas Gerais - Brasil
+
+</p>
+
+
+<a href="#">
+
+Ver localização
+
+</a>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div class="map-container">
+
+
+<iframe
+
+src="https://www.google.com/maps?q=Manhua%C3%A7u%20MG&output=embed"
+
+loading="lazy"
+
+allowfullscreen=""
+
+title="Localização Forte Minas Corretora">
+
+</iframe>
+
+
+</div>
+
+
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+WHATSAPP FLUTUANTE
+====================================================== -->
+
+
+<a href="https://wa.me/553333333333"
+class="whatsapp-float"
+target="_blank"
+aria-label="Conversar pelo WhatsApp">
+
+
+<svg 
+viewBox="0 0 32 32"
+width="32"
+height="32">
+
+
+<path 
+d="M16 2.8A13.1 13.1 0 0 0 4.7 22.5L3 29l6.7-1.7A13.2 13.2 0 1 0 16 2.8zm0 23.8a10.7 10.7 0 0 1-5.4-1.5l-.4-.2-4 .9.9-3.8-.3-.4a10.7 10.7 0 1 1 9.2 5z"/>
+
+</svg>
+
+
+</a>
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+FOOTER
+====================================================== -->
+
+
+<footer class="footer">
+
+
+
+<div class="container footer-grid">
+
+
+
+
+
+
+<div class="footer-brand">
+
+
+<img src="assets/logo.png"
+alt="Forte Minas Corretora de Seguros">
+
+
+
+<p>
+
+Forte Minas Corretora de Seguros.
+
+Protegendo histórias, patrimônios
+e conquistas.
+
+</p>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer-links">
+
+
+<h3>
+
+Links
+
+</h3>
+
+
+<ul>
+
+
+<li>
+
+<a href="#inicio">
+
+Início
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="#sobre">
+
+Sobre
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="#seguros">
+
+Seguros
+
+</a>
+
+</li>
+
+
+
+<li>
+
+<a href="#contato">
+
+Contato
+
+</a>
+
+</li>
+
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer-links">
+
+
+<h3>
+
+Seguros
+
+</h3>
+
+
+<ul>
+
+
+<li>
+
+Seguro Caminhão
+
+</li>
+
+
+<li>
+
+Seguro Auto
+
+</li>
+
+
+<li>
+
+Seguro Empresarial
+
+</li>
+
+
+<li>
+
+Seguro Vida
+
+</li>
+
+
+</ul>
+
+
+</div>
+
+
+
+
+
+
+
+
+<div class="footer-contact">
+
+
+<h3>
+
+Contato
+
+</h3>
+
+
+<p>
+
+📱 WhatsApp
+
+</p>
+
+
+<p>
+
+✉ financeiro@forteminascorretora.com
+
+</p>
+
+
+<p>
+
+📍 Minas Gerais - Brasil
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="footer-bottom">
+
+
+<p>
+
+© 2026 Forte Minas Corretora de Seguros.
 Todos os direitos reservados.
 
 </p>
 
+
+
+</div>
+
+
+
+
+
 </footer>
 
-<a
-class="whatsapp"
-href="https://wa.me/5533984017050"
-target="_blank"
-title="Fale conosco pelo WhatsApp">
 
-💬
 
-</a>
+
+
+
+
+
+
+<!-- =====================================================
+DADOS ESTRUTURADOS GOOGLE
+====================================================== -->
+
+
+<script type="application/ld+json">
+
+
+{
+
+"@context":"https://schema.org",
+
+"@type":"InsuranceAgency",
+
+"name":"Forte Minas Corretora de Seguros",
+
+"url":"https://forteminascorretora.com/",
+
+"logo":
+"https://forteminascorretora.com/assets/logo.png",
+
+"description":
+"Corretora de seguros especializada em proteção para veículos, empresas, transportadores e famílias.",
+
+"areaServed":
+"Minas Gerais, Brasil",
+
+
+"contactPoint":{
+
+"@type":"ContactPoint",
+
+"telephone":"+55-33-3333-3333",
+
+"contactType":"customer service"
+
+}
+
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+<!-- =====================================================
+JAVASCRIPT
+====================================================== -->
+
+
+<script src="script.js"></script>
+
+
 
 </body>
+
 
 </html>
