@@ -1026,3 +1026,41 @@ button {
         bottom: 18px;
     }
 }
+/*==========================
+PARCEIROS
+==========================*/
+
+.partners{
+    margin-top:70px;
+    text-align:center;
+}
+
+.partners h3{
+    font-size:30px;
+    color:#061A33;
+    margin-bottom:40px;
+    font-weight:700;
+}
+
+.partners-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:35px;
+    align-items:center;
+}
+
+.partner-logo{
+    width:180px;
+    height:70px;
+    object-fit:contain;
+    margin:auto;
+    filter:grayscale(100%);
+    opacity:.75;
+    transition:.35s;
+}
+
+.partner-logo:hover{
+    filter:none;
+    opacity:1;
+    transform:scale(1.08);
+}
