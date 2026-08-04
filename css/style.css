@@ -1049,14 +1049,14 @@ PARCEIROS
     align-items:center;
 }
 
-.partner-logo{
-    width:180px;
-    height:70px;
+.partners-track img{
+    width:120px;
+    height:50px;
     object-fit:contain;
-    margin:auto;
+    margin:0 22px;
+    transition:.35s;
     filter:grayscale(100%);
     opacity:.75;
-    transition:.35s;
 }
 
 .partner-logo:hover{
