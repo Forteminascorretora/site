@@ -141,129 +141,144 @@
    <link rel="stylesheet"
    href="css/style.css">
     <!-- AJUSTES VISUAIS DA CAPA -->
-    <style>
-        :root {
-            --forte-azul-marinho: #061a33;
-        }
-        
-        .header {
-           background: var(--forte-azul-marinho) !important;
-           box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
-           padding: 8px 0 !important;
-            
-        .header-container {
-           min-height: 78px !important;
-}
+<style>
+    :root {
+        --forte-azul-marinho: #061a33;
+    }
 
-.logo img {
-    width: 82px !important;
-    height: auto !important;
+    .header {
+        background: var(--forte-azul-marinho) !important;
+        box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
+        padding: 6px 0 !important;
+    }
+
+    .header-container {
+        min-height: 72px !important;
+    }
+
+    .logo img {
+        width: 76px !important;
+        height: auto !important;
+    }
+
+    .hero {
+        min-height: calc(100vh - 84px) !important;
+        position: relative;
+        display: flex !important;
+        align-items: flex-end !important;
+        padding-top: 84px !important;
+        padding-bottom: 40px !important;
+        overflow: hidden;
+
+        background-image: url("assets/hero.webp") !important;
+        background-size: cover !important;
+        background-position: center 18% !important;
+        background-repeat: no-repeat !important;
+    }
+
+    .hero::before,
+    .hero::after,
+    .hero-overlay {
+        display: none !important;
+        content: none !important;
+        background: transparent !important;
+        opacity: 0 !important;
+    }
+
+    .hero-container {
+        width: 100%;
+        min-height: calc(100vh - 164px);
+        display: flex !important;
+        align-items: flex-end !important;
+        justify-content: flex-start !important;
+        position: relative;
+        z-index: 2;
+    }
+
+    .hero-buttons-only {
+        display: flex !important;
+        align-items: center;
+        gap: 18px;
+        flex-wrap: wrap;
+        margin: 0 !important;
+    }
+
+    .hero-buttons-only .btn-primary,
+    .hero-buttons-only .btn-secondary {
+        min-height: 50px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        padding: 13px 28px;
+        font-weight: 700;
+        text-decoration: none;
+        transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+    }
+
+    .hero-buttons-only .btn-primary:hover,
+    .hero-buttons-only .btn-secondary:hover {
+        transform: translateY(-3px);
+    }
+
+    .hero-buttons-only .btn-secondary {
+        color: #ffffff !important;
+        border: 2px solid #ffffff !important;
+        background: rgba(6, 26, 51, .42) !important;
+        -webkit-backdrop-filter: blur(4px);
+        backdrop-filter: blur(4px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
+    }
+
+    .hero-buttons-only .btn-secondary:hover {
+        color: var(--forte-azul-marinho) !important;
+        background: #ffffff !important;
+    }
+
+    @media (max-width: 900px) {
+        .header {
+            padding: 5px 0 !important;
+        }
+
+        .header-container {
+            min-height: 66px !important;
+        }
+
+        .logo img {
+            width: 70px !important;
         }
 
         .hero {
-            min-height: calc(100vh - 70px) !important;
-            position: relative;
-            display: flex !important;
-            align-items: flex-end !important;
-            padding-top: 90px !important;
-            padding-bottom: 54px !important;
-            overflow: hidden;
-            background-image: url("assets/hero.webp") !important;
-            background-size: cover !important;
-            background-position: center center !important;
-            background-repeat: no-repeat !important;
-        }
-
-        .hero::before,
-        .hero::after,
-        .hero-overlay {
-            display: none !important;
-            content: none !important;
-            background: none !important;
+            min-height: 720px !important;
+            padding-top: 76px !important;
+            padding-bottom: 28px !important;
+            background-position: 68% 18% !important;
         }
 
         .hero-container {
-            width: 100%;
-            min-height: calc(100vh - 199px);
-            display: flex !important;
-            align-items: flex-end !important;
-            justify-content: flex-start !important;
-            position: relative;
-            z-index: 2;
+            min-height: 610px;
+        }
+    }
+
+    @media (max-width: 600px) {
+        .hero {
+            min-height: 680px !important;
+            background-position: 72% 18% !important;
         }
 
         .hero-buttons-only {
-            display: flex !important;
-            align-items: center;
-            gap: 20px;
-            flex-wrap: wrap;
-            margin: 0 !important;
+            width: 100%;
+            flex-direction: column;
+            gap: 12px;
         }
 
         .hero-buttons-only .btn-primary,
         .hero-buttons-only .btn-secondary {
-            min-height: 52px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 999px;
-            padding: 14px 30px;
-            font-weight: 700;
-            text-decoration: none;
-            transition: transform .25s ease, box-shadow .25s ease, background .25s ease;
+            width: 100%;
+            text-align: center;
         }
-
-        .hero-buttons-only .btn-primary:hover,
-        .hero-buttons-only .btn-secondary:hover {
-            transform: translateY(-3px);
-        }
-
-        .hero-buttons-only .btn-secondary {
-            color: #ffffff !important;
-            border: 2px solid #ffffff !important;
-            background: rgba(6, 26, 51, .52) !important;
-            -webkit-backdrop-filter: blur(5px);
-            backdrop-filter: blur(5px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, .18);
-        }
-
-        .hero-buttons-only .btn-secondary:hover {
-            color: var(--forte-azul-marinho) !important;
-            background: #ffffff !important;
-        }
-
-        @media (max-width: 900px) {
-            .hero {
-                min-height: 760px !important;
-                padding-top: 120px !important;
-                padding-bottom: 32px !important;
-                background-position: 68% center !important;
-            }
-
-            .hero-container {
-                min-height: 608px;
-            }
-        }
-
-        @media (max-width: 600px) {
-            .hero {
-                min-height: 700px !important;
-                background-position: 71% center !important;
-            }
-
-            .hero-buttons-only {
-                width: 100%;
-                flex-direction: column;
-                gap: 12px;
-            }
-
-            .hero-buttons-only .btn-primary,
-            .hero-buttons-only .btn-secondary {
-                width: 100%;
-                text-align: center;
-            }
-        }
-    </style>
+    }
+</style>
 
 
 </head>
@@ -462,7 +477,7 @@ soluções personalizadas para cada cliente.
 
 
 <img 
-src="assets/hero.jpg"
+src="assets/hero.webp"
 alt="Equipe Forte Minas Corretora de Seguros">
 
 
