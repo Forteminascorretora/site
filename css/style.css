@@ -175,23 +175,24 @@ button {
 ===================================================== */
 
 
-.hero-container {
+   .header {
 
+    position: fixed;
 
-    position:fixed;
+    top: 0;
+    left: 0;
 
-    top:0;
+    width: 100%;
 
-    left:0;
+    z-index: 1000;
 
-    width:100%;
+    padding: 18px 0;
 
+    background: transparent;
 
-    z-index:1000;
+    transition: all .3s ease;
 
-
-    padding:
-    18px 0;
+}
 
 
     transition:
@@ -481,8 +482,7 @@ button {
     cover;
 
 
-    background-position:
-    center;
+   background-position:right center;
 
 
     overflow:hidden;
