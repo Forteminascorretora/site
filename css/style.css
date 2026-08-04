@@ -175,7 +175,7 @@ button {
 ===================================================== */
 
 
-.header {
+.hero-container {
 
 
     position:fixed;
@@ -474,7 +474,7 @@ button {
     ),
 
 
-    url('assets/hero.webp');
+    url('../assets/hero.webp');
 
 
     background-size:
