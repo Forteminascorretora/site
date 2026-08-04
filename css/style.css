@@ -331,6 +331,7 @@ button {
 
 .about-image {
     width: 100%;
+    min-height: 560px;
     overflow: hidden;
     border-radius: var(--radius);
     box-shadow: var(--sombra);
@@ -377,6 +378,7 @@ button {
 .about-list span {
     width: 28px;
     height: 28px;
+    flex: 0 0 28px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -384,6 +386,12 @@ button {
     background: var(--dourado);
     color: var(--azul-escuro);
     font-weight: 800;
+}
+
+/* Garante que a imagem da equipe nunca fique invisível */
+.about-image.reveal {
+    opacity: 1;
+    transform: none;
 }
 
 /* =====================================================
@@ -858,12 +866,17 @@ button {
 .reveal {
     opacity: 0;
     transform: translateY(40px);
-    transition: .8s ease;
+    transition: opacity .8s ease, transform .8s ease;
 }
 
 .reveal.active {
     opacity: 1;
     transform: translateY(0);
+}
+
+.about-image.reveal {
+    opacity: 1;
+    transform: none;
 }
 
 /* =====================================================
@@ -899,6 +912,11 @@ button {
 
     .about-image {
         order: 2;
+        min-height: 500px;
+    }
+
+    .about-image img {
+        height: 500px;
     }
 
     .cards-grid {
@@ -970,6 +988,15 @@ button {
 }
 
 @media(max-width: 600px) {
+    .about-image {
+        min-height: 420px;
+    }
+
+    .about-image img {
+        height: 420px;
+        object-position: center top;
+    }
+
     .section {
         padding: 70px 0;
     }
@@ -1076,6 +1103,7 @@ PARCEIROS
     opacity:.75;
 }
 
+.partners-track img:hover,
 .partner-logo:hover{
     filter:none;
     opacity:1;
