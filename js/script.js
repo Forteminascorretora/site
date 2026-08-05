@@ -1,123 +1,186 @@
-
 /* ============================
    FORTE MINAS - SCRIPT
 ============================ */
 
-// Rolagem suave dos links do menu
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', function (e) {
-        const destino = document.querySelector(this.getAttribute('href'));
+document.addEventListener("DOMContentLoaded", () => {
 
-        if (destino) {
-            e.preventDefault();
+    /* ============================
+       ROLAGEM SUAVE
+    ============================ */
 
-            destino.scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+
+        link.addEventListener("click", function (event) {
+
+            const targetId = this.getAttribute("href");
+
+            if (!targetId || targetId === "#") {
+                return;
+            }
+
+            const target = document.querySelector(targetId);
+
+            if (target) {
+                event.preventDefault();
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+            }
+        });
+
     });
-});
 
 
-// Header muda ao rolar a página
-const header = document.querySelector("header");
+    /* ============================
+       CABEÇALHO AO ROLAR
+    ============================ */
 
-window.addEventListener("scroll", () => {
+    const header = document.querySelector("#header");
 
-    if (window.scrollY > 80) {
+    const updateHeader = () => {
 
-        header.style.background = "#08291f";
-        header.style.padding = "8px 0";
+        if (!header) {
+            return;
+        }
+
+        if (window.scrollY > 80) {
+            header.classList.add("scrolled");
+        } else {
+            header.classList.remove("scrolled");
+        }
+
+    };
+
+    window.addEventListener("scroll", updateHeader);
+    updateHeader();
+
+
+    /* ============================
+       MENU MOBILE
+    ============================ */
+
+    const menuToggle = document.querySelector("#menu-toggle");
+    const nav = document.querySelector("#nav");
+
+    if (menuToggle && nav) {
+
+        menuToggle.addEventListener("click", () => {
+            nav.classList.toggle("active");
+        });
+
+        nav.querySelectorAll("a").forEach(link => {
+
+            link.addEventListener("click", () => {
+                nav.classList.remove("active");
+            });
+
+        });
+
+    }
+
+
+    /* ============================
+       ANIMAÇÕES AO ROLAR
+    ============================ */
+
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+
+        const revealObserver = new IntersectionObserver(
+            entries => {
+
+                entries.forEach(entry => {
+
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("active");
+                        revealObserver.unobserve(entry.target);
+                    }
+
+                });
+
+            },
+            {
+                threshold: 0.15
+            }
+        );
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
 
     } else {
 
-        header.style.background = "#0f3d2e";
-        header.style.padding = "18px 0";
+        revealElements.forEach(element => {
+            element.classList.add("active");
+        });
 
     }
 
-});
 
+    /* ============================
+       CONTADORES
+    ============================ */
 
-// Animação dos cards
-const cards = document.querySelectorAll(".card");
+    const counters = document.querySelectorAll("[data-number]");
 
-const observer = new IntersectionObserver((entries) => {
+    if ("IntersectionObserver" in window && counters.length) {
 
-    entries.forEach(entry => {
+        const counterObserver = new IntersectionObserver(
+            entries => {
 
-        if(entry.isIntersecting){
+                entries.forEach(entry => {
 
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
+                    if (!entry.isIntersecting) {
+                        return;
+                    }
 
-        }
+                    const element = entry.target;
+                    const target = Number(element.dataset.number);
 
-    });
+                    if (!Number.isFinite(target)) {
+                        return;
+                    }
 
-},{
-    threshold:0.2
-});
+                    let current = 0;
+                    const duration = 1400;
+                    const frameRate = 60;
+                    const totalFrames = Math.round(duration / (1000 / frameRate));
+                    const increment = target / totalFrames;
 
-cards.forEach(card=>{
+                    const animateCounter = () => {
 
-    card.style.opacity="0";
-    card.style.transform="translateY(50px)";
-    card.style.transition=".8s";
+                        current += increment;
 
-    observer.observe(card);
+                        if (current >= target) {
+                            element.textContent = target;
+                            return;
+                        }
 
-});
+                        element.textContent = Math.floor(current);
+                        requestAnimationFrame(animateCounter);
+                    };
 
+                    animateCounter();
+                    counterObserver.unobserve(element);
 
-// Botão voltar ao topo
+                });
 
-const btnTop = document.createElement("button");
+            },
+            {
+                threshold: 0.4
+            }
+        );
 
-btnTop.innerHTML="↑";
-
-btnTop.id="btnTop";
-
-document.body.appendChild(btnTop);
-
-btnTop.style.position="fixed";
-btnTop.style.right="25px";
-btnTop.style.bottom="25px";
-btnTop.style.width="50px";
-btnTop.style.height="50px";
-btnTop.style.borderRadius="50%";
-btnTop.style.border="none";
-btnTop.style.background="#28a745";
-btnTop.style.color="#fff";
-btnTop.style.fontSize="22px";
-btnTop.style.cursor="pointer";
-btnTop.style.display="none";
-btnTop.style.boxShadow="0 8px 20px rgba(0,0,0,.25)";
-btnTop.style.zIndex="9999";
-
-window.addEventListener("scroll",()=>{
-
-    if(window.scrollY>400){
-
-        btnTop.style.display="block";
-
-    }else{
-
-        btnTop.style.display="none";
+        counters.forEach(counter => {
+            counterObserver.observe(counter);
+        });
 
     }
 
-});
 
-btnTop.addEventListener("click",()=>{
-
-    window.scrollTo({
-
-        top:0,
-        behavior:"smooth"
-
-    });
+    console.log("Forte Minas Corretora carregada com sucesso.");
 
 });
-
-console.log("Forte Minas Corretora carregada com sucesso.");
