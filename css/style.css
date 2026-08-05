@@ -38,6 +38,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     font-family: 'Montserrat', Arial, sans-serif;
     color: var(--grafite);
     background: var(--branco);
@@ -87,15 +88,14 @@ button {
     width: 100%;
     z-index: 1000;
     padding: 6px 0;
-    background: var(--azul-escuro);
-    box-shadow: 0 4px 18px rgba(0,0,0,.18);
+    background: #061A33 !important;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, .18);
     transition: var(--transicao);
 }
 
 .header.scrolled {
-    background: var(--azul-escuro);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 5px 25px rgba(0,0,0,.18);
+    background: #061A33 !important;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, .20);
 }
 
 .header-container {
@@ -323,10 +323,13 @@ button {
 }
 
 .about-grid {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
-    gap: 70px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 46px;
 }
 
 .about-image {
@@ -337,8 +340,7 @@ button {
 }
 
 .about-image img {
-    width: 100%;
-    max-width: 760px;
+    width: min(100%, 780px);
     height: auto;
     display: block;
     margin: 0 auto;
@@ -346,34 +348,44 @@ button {
     object-position: center;
     border-radius: var(--radius);
     box-shadow: var(--sombra);
-    background: #ffffff;
-    transition: transform .5s ease;
+    background: var(--branco);
+    transition: transform .45s ease;
 }
 
 .about-image:hover img {
-    transform: scale(1.025);
+    transform: scale(1.018);
+}
+
+.about-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .about-content h3 {
+    margin-bottom: 24px;
     color: var(--azul-escuro);
     font-size: 32px;
-    margin-bottom: 25px;
+    line-height: 1.25;
+    text-align: center;
 }
 
 .about-content p {
+    margin-bottom: 18px;
     color: var(--cinza);
-    margin-bottom: 20px;
+    line-height: 1.75;
 }
 
 .about-list {
-    margin-top: 30px;
+    max-width: 760px;
+    margin: 28px auto 0;
 }
 
 .about-list li {
     display: flex;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 15px;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 14px;
     font-weight: 600;
 }
 
@@ -381,12 +393,12 @@ button {
     width: 28px;
     height: 28px;
     flex: 0 0 28px;
-    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--dourado);
     color: var(--azul-escuro);
+    background: var(--dourado);
+    border-radius: 50%;
     font-weight: 800;
 }
 
@@ -831,36 +843,35 @@ button {
 ===================================================== */
 .whatsapp-float {
     position: fixed;
-    right: 25px;
-    bottom: 25px;
-    width: 65px;
-    height: 65px;
-    background: #25D366;
-    border-radius: 50%;
+    right: 22px;
+    bottom: 22px;
+    width: 70px;
+    height: 70px;
+    z-index: 9999;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 999;
-    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+    overflow: hidden;
+    border-radius: 50%;
+    background: #25D366;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .26);
     animation: pulse 2s infinite;
 }
 
 .whatsapp-float img {
-    width: 42px;
-    height: 42px;
+    width: 44px;
+    height: 44px;
     display: block;
     object-fit: contain;
 }
 
 @keyframes pulse {
-    0% {
+    0%, 100% {
         transform: scale(1);
     }
+
     50% {
-        transform: scale(1.08);
-    }
-    100% {
-        transform: scale(1);
+        transform: scale(1.06);
     }
 }
 
@@ -908,13 +919,6 @@ button {
 
     .hero-container {
         min-height: 610px;
-    }
-
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-    .about-image {
-        order: 2;
     }
 
     .cards-grid {
@@ -1170,43 +1174,74 @@ button {
         height: 44px;
         margin: 0 14px;
     }
-}
-/*==========================
-PARCEIROS
-==========================*/
 
-.partners{
-    margin-top:70px;
-    text-align:center;
+    .about-grid {
+        gap: 34px;
+    }
+
+    .about-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+    }
+
+    .partners-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 22px 18px;
+    }
+
+    .partner-logo {
+        width: 105px;
+        height: 46px;
+    }
+
+    .whatsapp-float {
+        right: 16px;
+        bottom: 16px;
+        width: 62px;
+        height: 62px;
+    }
+
+    .whatsapp-float img {
+        width: 38px;
+        height: 38px;
+    }
+}
+/* =====================================================
+   PARCEIROS
+===================================================== */
+.partners {
+    margin-top: 58px;
+    text-align: center;
 }
 
-.partners h3{
-    font-size:30px;
-    color:#061A33;
-    margin-bottom:40px;
-    font-weight:700;
+.partners h3 {
+    margin-bottom: 34px;
+    color: var(--azul-escuro);
+    font-size: 28px;
+    font-weight: 700;
 }
 
-.partners-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:35px;
-    align-items:center;
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    align-items: center;
+    gap: 26px;
 }
 
-.partners-track img{
-    width:120px;
-    height:50px;
-    object-fit:contain;
-    margin:0 22px;
-    transition:.35s;
-    filter:grayscale(100%);
-    opacity:.75;
+.partner-logo {
+    width: 120px;
+    height: 52px;
+    margin: auto;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: .75;
+    transition: var(--transicao);
 }
 
-.partners-track img:hover,
-.partner-logo:hover{
-    filter:none;
-    opacity:1;
-    transform:scale(1.08);
+.partner-logo:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+    transform: scale(1.08);
 }
