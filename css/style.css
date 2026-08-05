@@ -331,20 +331,22 @@ button {
 
 .about-image {
     width: 100%;
-    min-height: 560px;
-    overflow: hidden;
-    border-radius: var(--radius);
-    box-shadow: var(--sombra);
-    background: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .about-image img {
     width: 100%;
-    height: 560px;
+    max-width: 560px;
+    height: auto;
     display: block;
-    object-fit: cover;
-    object-position: center top;
+    margin: 0 auto;
+    object-fit: contain;
+    object-position: center;
     border-radius: var(--radius);
+    box-shadow: var(--sombra);
+    background: #ffffff;
     transition: transform .5s ease;
 }
 
@@ -388,7 +390,6 @@ button {
     font-weight: 800;
 }
 
-/* Garante que a imagem da equipe nunca fique invisível */
 .about-image.reveal {
     opacity: 1;
     transform: none;
@@ -909,14 +910,8 @@ button {
     .about-grid {
         grid-template-columns: 1fr;
     }
-
     .about-image {
         order: 2;
-        min-height: 500px;
-    }
-
-    .about-image img {
-        height: 500px;
     }
 
     .cards-grid {
@@ -988,14 +983,11 @@ button {
 }
 
 @media(max-width: 600px) {
-    .about-image {
-        min-height: 420px;
+    .about-image img {
+        max-width: 100%;
+        height: auto;
     }
 
-    .about-image img {
-        height: 420px;
-        object-position: center top;
-    }
 
     .section {
         padding: 70px 0;
