@@ -338,7 +338,7 @@ button {
 
 .about-image img {
     width: 100%;
-    max-width: 560px;
+    max-width: 760px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -845,8 +845,11 @@ button {
     animation: pulse 2s infinite;
 }
 
-.whatsapp-float svg {
-    fill: white;
+.whatsapp-float img {
+    width: 32px;
+    height: 32px;
+    display: block;
+    object-fit: contain;
 }
 
 @keyframes pulse {
@@ -1087,7 +1090,7 @@ button {
     .about-content h3 {
         font-size: 27px;
         line-height: 1.2;
-        text-align: left;
+        text-align: center;
     }
 
     .about-content p {
