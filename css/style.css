@@ -313,7 +313,10 @@ button {
 
 .section-header p {
     color: var(--cinza);
-    font-size: 17px;
+    font-size: 21px;
+    line-height: 1.8;
+    max-width: 920px;
+    margin: 0 auto 18px;
 }
 
 /* =====================================================
