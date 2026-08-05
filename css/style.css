@@ -323,10 +323,13 @@ button {
 }
 
 .about-grid {
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-    align-items: center;
-    gap: 70px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 55px;
 }
 
 .about-image {
@@ -337,8 +340,7 @@ button {
 }
 
 .about-image img {
-    width: 100%;
-    max-width: 560px;
+    width: min(100%, 820px);
     height: auto;
     display: block;
     margin: 0 auto;
@@ -351,13 +353,20 @@ button {
 }
 
 .about-image:hover img {
-    transform: scale(1.025);
+    transform: scale(1.018);
+}
+
+.about-content {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
 }
 
 .about-content h3 {
     color: var(--azul-escuro);
     font-size: 32px;
     margin-bottom: 25px;
+    text-align: center;
 }
 
 .about-content p {
@@ -366,7 +375,8 @@ button {
 }
 
 .about-list {
-    margin-top: 30px;
+    max-width: 760px;
+    margin: 30px auto 0;
 }
 
 .about-list li {
@@ -390,6 +400,7 @@ button {
     font-weight: 800;
 }
 
+/* Mantém a imagem visível mesmo se a animação falhar */
 .about-image.reveal {
     opacity: 1;
     transform: none;
@@ -907,13 +918,6 @@ button {
         min-height: 610px;
     }
 
-    .about-grid {
-        grid-template-columns: 1fr;
-    }
-    .about-image {
-        order: 2;
-    }
-
     .cards-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -983,13 +987,22 @@ button {
 }
 
 @media(max-width: 600px) {
-    .about-image img {
-        max-width: 100%;
-        height: auto;
+        .about-grid {
+        gap: 35px;
     }
 
+    .about-image img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        border-radius: 14px;
+    }
 
-    .section {
+    .about-content h3 {
+        font-size: 27px;
+    }
+
+.section {
         padding: 70px 0;
     }
 
